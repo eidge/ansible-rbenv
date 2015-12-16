@@ -3,8 +3,9 @@
 # this playbook should be run with {{ rbenv_user }} instead of root
 
 - name: clone rbenv repo
-  git: repo=https://github.com/sstephenson/rbenv.git 
+  git: repo=https://github.com/rbenv/ruby-build.git
        dest=/home/{{ rbenv_user }}/.rbenv
+       accept_hostkey=true
 
 - name: Add rbenv to the PATH
   lineinfile:

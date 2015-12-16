@@ -26,6 +26,6 @@
             rbenv rehash 
 
 - name: install bundler
-  command: /home/{{ rbenv_user }}/.rbenv/shims/gem install bundler
+  command: /home/deploy/.rbenv/shims/gem install bundler
   when: rbenv_install_bundler == True
 
