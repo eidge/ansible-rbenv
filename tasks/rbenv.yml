@@ -3,7 +3,7 @@
 # this playbook should be run with {{ rbenv_user }} instead of root
 
 - name: clone rbenv repo
-  git: repo=https://github.com/rbenv/ruby-build.git
+  git: repo=https://github.com/rbenv/rbenv.git
        dest=/home/{{ rbenv_user }}/.rbenv
        accept_hostkey=true
 

@@ -20,7 +20,8 @@
 - name: install ruby {{ rbenv_ruby_version }} 
   shell: executable=/bin/bash
          chdir=/home/{{ rbenv_user }}
-         export PATH="/home/{{ rbenv_user }}/.rbenv/bin:$PATH"; eval "$(rbenv init -)";
+         export PATH="/home/{{ rbenv_user }}/.rbenv/bin:$PATH";
+         eval "$(rbenv init -)";
          RUBY_CONFIGURE_OPTS=--with-readline-dir="/lib/x86_64-linux-gnu/libreadline.so.6.3" MAKE_OPTS="{{ rbenv_ruby_make_opts }}" rbenv install "{{ rbenv_ruby_version }}" -s;
             rbenv global "{{ rbenv_ruby_version }}";  
             rbenv rehash 
